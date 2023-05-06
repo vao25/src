@@ -1,7 +1,7 @@
 # src
 Ondřej Valtr; Bakalářská práce 2022/23 - SLAM; repozitář pro adresář src v ROS2 workspace
 
-# Instalace
+## Instalace
 > mkdir ~/ros2_ws
 > cd ~/ros2_ws
 > git clone https://github.com/vao25/ros2_ws.git src
