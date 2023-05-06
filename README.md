@@ -18,15 +18,15 @@ ros2 run ekfSLAM ekf_sim
 ```
 
 ## Použité topic
-true pro msgTrue
+*true* pro msgTrue
 
-path pro msgPath
+*path* pro msgPath
 
-stateX pro msgStateX
+*stateX* pro msgStateX
 
-stateP pro msgStateP
+*stateP* pro msgStateP
 
-stateLen pro msgStateLen
+*stateLen* pro msgStateLen
 
 ## Nastínění rekonstrukce dat z přijmutých zpráv:
 
