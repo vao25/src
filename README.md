@@ -17,7 +17,7 @@ source install/setup.bash
 ros2 run ekfSLAM ekf_sim
 ```
 
-## Použité *"topicy"*
+## Použité *"topics"*
 *true* pro msgTrue
 
 *path* pro msgPath
