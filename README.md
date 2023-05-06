@@ -11,9 +11,11 @@ Ondřej Valtr; Bakalářská práce 2022/23 - SLAM; repozitář pro adresář sr
 ## Spuštění v ros2:
 
 ### ve workspace ros2_ws:
+```
 colcon build --packages-select ekfSLAM
 source install/setup.bash
 ros2 run ekfSLAM ekf_sim
+```
 
 
 ## Nastínění rekonstrukce dat z přijmutých zpráv:
