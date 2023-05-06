@@ -16,20 +16,20 @@ class EKF(Node):
         self.publisher_P = self.create_publisher(Float64MultiArray, 'stateP', 10)
         self.publisher_len = self.create_publisher(Float64MultiArray, 'stateLen', 10)
 
-def run():
-    with open(os.path.join(os.getcwd(), 'src/ekfSLAM/ekfSLAM/file.json'), 'r') as fr:
-        env = json.load(fr)
+    def run():
+        with open(os.path.join(os.getcwd(), 'src/ekfSLAM/ekfSLAM/file.json'), 'r') as fr:
+            env = json.load(fr)
 
-    lm = np.array([[],[]])
-    for i in range(len(env["lm"])):
-        lm = np.append(lm, [[env["lm"][i][0]], [env["lm"][i][1]]], axis = 1)
-        
-    wp = np.array([[],[]])
-    for i in range(len(env["wp"])):
-        wp = np.append(wp, [[env["wp"][i][0]], [env["wp"][i][1]]], axis = 1)
-        
-    data = ekfslam_sim(lm, wp, env["x3"])
-    return data
+        lm = np.array([[],[]])
+        for i in range(len(env["lm"])):
+            lm = np.append(lm, [[env["lm"][i][0]], [env["lm"][i][1]]], axis = 1)
+
+        wp = np.array([[],[]])
+        for i in range(len(env["wp"])):
+            wp = np.append(wp, [[env["wp"][i][0]], [env["wp"][i][1]]], axis = 1)
+
+        data = ekfslam_sim(lm, wp, env["x3"])
+        return data
 
 def main(args=None): 
     rclpy.init(args=args)
@@ -43,7 +43,7 @@ def main(args=None):
     msgs = [msgTrue, msgPath, msgStateX, msgStateP, msgStateLen]
     publishers = [ekf.publisher_true, ekf.publisher_path, ekf.publisher_X, ekf.publisher_P, ekf.publisher_len]
 
-    data = run()
+    data = ekf.run()
     arrayT = []
     arrayPath = []
     arrayX = []
