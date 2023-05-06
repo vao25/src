@@ -10,8 +10,11 @@ from .ekfslam_sim import ekfslam_sim
 class EKF(Node):
     def __init__(self):
         super().__init__('ekf')
-        self.publisher_ = self.create_publisher(Float64MultiArray, 'topic', 10)
-        
+        self.publisher_true = self.create_publisher(Float64MultiArray, 'true', 10)
+        self.publisher_path = self.create_publisher(Float64MultiArray, 'path', 10)
+        self.publisher_X = self.create_publisher(Float64MultiArray, 'stateX', 10)
+        self.publisher_P = self.create_publisher(Float64MultiArray, 'stateP', 10)
+        self.publisher_len = self.create_publisher(Float64MultiArray, 'stateLen', 10)
 
 def run():
     with open(os.path.join(os.getcwd(), 'src/ekfSLAM/ekfSLAM/file.json'), 'r') as fr:
@@ -38,7 +41,8 @@ def main(args=None):
     msgStateP = Float64MultiArray()
     msgStateLen = Float64MultiArray()
     msgs = [msgTrue, msgPath, msgStateX, msgStateP, msgStateLen]
-    
+    publishers = [ekf.publisher_true, ekf.publisher_path, ekf.publisher_X, ekf.publisher_P, ekf.publisher_len]
+
     data = run()
     arrayT = []
     arrayPath = []
@@ -60,7 +64,7 @@ def main(args=None):
     msgs[4].data = stateLen
             
     for i in range(len(msgs)):
-        ekf.publisher_.publish(msgs[i])
+        publishers[i].publish(msgs[i])
     ekf.get_logger().info('Finished!')
 
     # Destroy the node explicitly
