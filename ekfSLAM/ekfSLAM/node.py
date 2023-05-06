@@ -16,7 +16,7 @@ class EKF(Node):
         self.publisher_P = self.create_publisher(Float64MultiArray, 'stateP', 10)
         self.publisher_len = self.create_publisher(Float64MultiArray, 'stateLen', 10)
 
-    def run():
+    def run(self):
         with open(os.path.join(os.getcwd(), 'src/ekfSLAM/ekfSLAM/file.json'), 'r') as fr:
             env = json.load(fr)
 
