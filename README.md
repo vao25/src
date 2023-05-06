@@ -19,9 +19,13 @@ ros2 run ekfSLAM ekf_sim
 
 ## Použité topic
 true pro msgTrue
+
 path pro msgPath
+
 stateX pro msgStateX
+
 stateP pro msgStateP
+
 stateLen pro msgStateLen
 
 ## Nastínění rekonstrukce dat z přijmutých zpráv:
