@@ -6,7 +6,7 @@ Ondřej Valtr; Bakalářská práce 2022/23 - SLAM; repozitář pro adresář sr
 
 > cd ~/ros2_ws
 
-> git clone https://github.com/vao25/ros2_ws.git src
+> git clone https://github.com/vao25/src.git
 
 ## spuštění v ros2:
 
