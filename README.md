@@ -10,11 +10,20 @@ Ondřej Valtr; Bakalářská práce 2022/23 - SLAM; repozitář pro adresář sr
 
 ## Spuštění v ros2:
 
-### ve workspace ros2_ws:
+### EKF-SLAM
+**ve workspace ros2_ws:**
 ```
 colcon build --packages-select ekfSLAM
 source install/setup.bash
 ros2 run ekfSLAM ekf_sim
+```
+
+### FASTSLAM
+**ve workspace ros2_ws:**
+```
+colcon build --packages-select fastslam
+source install/setup.bash
+ros2 run fastslam fast_sim
 ```
 
 ## Použité *"topics"*
