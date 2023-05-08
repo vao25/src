@@ -2,6 +2,7 @@ import os
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float64MultiArray
+from std_msgs.msg import UInt16MultiArray
 import numpy as np
 import json
 from .ekfslam_sim import ekfslam_sim
@@ -14,7 +15,7 @@ class EKF(Node):
         self.publisher_path = self.create_publisher(Float64MultiArray, 'path', 10)
         self.publisher_X = self.create_publisher(Float64MultiArray, 'stateX', 10)
         self.publisher_P = self.create_publisher(Float64MultiArray, 'stateP', 10)
-        self.publisher_len = self.create_publisher(Float64MultiArray, 'stateLen', 10)
+        self.publisher_len = self.create_publisher(UInt16MultiArray, 'stateLen', 10)
 
     def run(self):
         with open(os.path.join(os.getcwd(), 'src/ekfSLAM/ekfSLAM/file.json'), 'r') as fr:
@@ -39,7 +40,7 @@ def main(args=None):
     msgPath = Float64MultiArray()
     msgStateX = Float64MultiArray()
     msgStateP = Float64MultiArray()
-    msgStateLen = Float64MultiArray()
+    msgStateLen = UInt16MultiArray()
     msgs = [msgTrue, msgPath, msgStateX, msgStateP, msgStateLen]
     publishers = [ekf.publisher_true, ekf.publisher_path, ekf.publisher_X, ekf.publisher_P, ekf.publisher_len]
 
@@ -53,7 +54,7 @@ def main(args=None):
         for i in range(3):
             arrayT.append(data['true'][i,j])
             arrayPath.append(data['path'][i,j])
-        stateLen.append(float(len(data['state'][j]['x'])))
+        stateLen.append(len(data['state'][j]['x']))
         for i in range(len(data['state'][j]['x'])):
             arrayX.append(data['state'][j]['x'][i][0])
             arrayP.append(data['state'][j]['P'][i])
