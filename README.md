@@ -48,11 +48,11 @@ for i in range((len(msgTrue)/3)):
     robotPath.append([msgPath[j], msgPath[j+1], msgPath[j+2]])
     
 X = []
-P = [] # diag
+P = [] # diag, for EKF-SLAM
 j = 0
 for i in range(len(msgStateLen)):
     k = int(msgStateLen[i])
     X.append([msgStateX[j:j+k]])
-    P.append([msgStateP[j:j+k]])
+    P.append([msgStateP[j:j+k]]) # for EKF-SLAM
     j = j + k
 ```   
