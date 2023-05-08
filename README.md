@@ -33,7 +33,7 @@ ros2 run fastslam fast_sim
 
 *stateX* pro msgStateX
 
-*stateP* pro msgStateP
+*stateP* pro msgStateP (pouze pro EKF-SLAM)
 
 *stateLen* pro msgStateLen
 
