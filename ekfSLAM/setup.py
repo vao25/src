@@ -21,7 +21,6 @@ setup(
     entry_points={
         'console_scripts': [
             'ekf_sim = ekfSLAM.node:main',
-            'listener = ekfSLAM.subscriber:main'
         ],
     },
 )
