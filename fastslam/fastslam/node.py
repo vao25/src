@@ -153,7 +153,7 @@ def main(args=None):
     for i, point in enumerate(points):    
         point_struct.pack_into(
             #buffer, i * point_struct.size, point.x, point.y, point.z, int("0x0000ffff",0)
-            buffer, i * point_struct.size, point.x, point.y, point.z, 255,0,0,255
+            buffer, i * point_struct.size, point.x, point.y, point.z, 255,255,255,255
         )
 
     landmarks.height = 1
