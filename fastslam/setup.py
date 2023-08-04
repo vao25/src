@@ -21,7 +21,6 @@ setup(
     entry_points={
         'console_scripts': [
             'fast_sim = fastslam.node:main',
-            'listener = fastslam.subscriber:main',
         ],
     },
 )
