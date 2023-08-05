@@ -22,11 +22,11 @@ def ekfslam_sim(lm, wp, phi):
        phi - initial rotation angle
 
      OUTPUTS:
-       data - a data structure containing:
-           data.true: the vehicle 'true'-path (ie, where the vehicle *actually* went)
-           data.path: the vehicle path estimate (ie, where SLAM estimates the vehicle went)
-           data.state(k).x: the SLAM state vector at time k
-           data.state(k).P: the diagonals of the SLAM covariance matrix at time k
+       data - a dictonary containing:
+           data['true']: the vehicle 'true'-path (ie, where the vehicle *actually* went)
+           data['path']: the vehicle path estimate (ie, where SLAM estimates the vehicle went)
+           data['state'][k]['x']: the SLAM state vector at time k
+           data['state'][k]['P']: the diagonals of the SLAM covariance matrix at time k
 
      NOTES:
        This program is a SLAM simulator. To use, create a set of landmarks and 
