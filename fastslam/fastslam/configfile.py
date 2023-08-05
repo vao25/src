@@ -3,7 +3,7 @@ import numpy as np
 """
 Configuration file
 Permits various adjustments to parameters of the FastSLAM algorithm.
-See fastslam_sim.m for more information
+See fastslam_sim.py for more information
 """
 
 # control parameters
