@@ -18,7 +18,7 @@ source install/setup.bash
 ros2 run ekfSLAM ekf_sim
 ```
 
-### FASTSLAM
+### FastSLAM
 **ve workspace ros2_ws:**
 ```
 colcon build --packages-select fastslam
