@@ -40,7 +40,6 @@ SWITCH_CONTROL_NOISE = 1 # if 0, velocity and gamma are perfect
 SWITCH_SENSOR_NOISE = 1 # if 0, measurements are perfect
 SWITCH_INFLATE_NOISE = 0 # if 1, the estimated Q and R are inflated (ie, add stabilising noise)
 SWITCH_PREDICT_NOISE = 1; # sample noise from predict (usually 1 for fastslam1.0 and 0 for fastslam2.0)
-SWITCH_SAMPLE_PROPOSAL = 1; # sample from proposal (no effect on fastslam1.0 and usually 1 for fastslam2.0)
 SWITCH_HEADING_KNOWN = 0 # if 1, the vehicle heading is observed directly at each iteration
 SWITCH_RESAMPLE= 1; 
 SWITCH_SEED_RANDOM= 0 # if not 0, seed the randn() with its value at beginning of simulation (for repeatability)
