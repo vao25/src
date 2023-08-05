@@ -25,11 +25,14 @@ def fastslam1_sim(lm, wp, phi):
 
      OUTPUTS:
        data - set of particles representing final state
+       xtrue - true trajectory of vehicle robot
+       xpath - estimated trajectory of vehicle robot
+       lms - estimated positions of landmarks for each time step
 
      NOTES:
        This program is a FastSLAM 1.0 simulator. To use, create a set of landmarks and 
        vehicle waypoints (ie, waypoints for the desired vehicle path). The program
-       'setup.py' may be used to create this simulated environment.
+       'slam_python/gui/setup.py' may be used to create this simulated environment.
            The configuration of the simulator is managed by the script file
        'configfile.py'. To alter the parameters of the vehicle, sensors, etc
        adjust this file. There are also several switches that control certain
