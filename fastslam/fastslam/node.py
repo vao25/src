@@ -24,8 +24,7 @@ class FAST(Node):
 
         self.true_path_publisher_ = self.create_publisher(Path, 'true_path', 10)
         self.estimated_path_publisher_ = self.create_publisher(Path, 'estimated_path', 10)
-        self.landmarks_publisher = self.create_publisher(PointCloud2, 'landmarks', 10)
-        self.publisher_ = self.create_publisher(Float64MultiArray, 'estimated_path', 10)      
+        self.landmarks_publisher = self.create_publisher(PointCloud2, 'landmarks', 10)     
         self.lm = None
 
     def run(self):
