@@ -27,6 +27,7 @@ ros2 run fastslam fast_sim
 ```
 
 ## Použité *"topics"*
+
 *Pozn.: Ve finální verzi tyto topics nakonec použité nejsou. Uvedeno i pro jaké vytvořené zprávy jsou určeny, které jsou do nich publikovány (tyto zprávy nejsou určeny pro Rviz 2). Pro případ, kdyby např. bylo potřeba tyto data
 odebírat jinými uzly (node) aplikace (např. pomocí subscriberů). Jsou připraveny k použití od-
 komentováním části pro vytvoření jejich publisherů v konstruktoru třídy (EKF nebo FAST) a příkazů
