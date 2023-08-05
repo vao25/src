@@ -29,7 +29,7 @@ R = np.array([[sigmaR**2, 0], [0, sigmaB**2]])
 
 # waypoint proximity
 AT_WAYPOINT = 1.0 # metres, distance from current waypoint at which to switch to next waypoint
-NUMBER_LOOPS = 2 # number of loops through the waypoint list
+NUMBER_LOOPS = 1 # number of loops through the waypoint list
 
 # resampling
 NPARTICLES= 100; 
