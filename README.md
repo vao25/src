@@ -20,7 +20,7 @@ ros2 run ekfSLAM ekf_sim
 
 > [!NOTE]
 I přes veškerou snahu nefunguje výsledná realizace bohužel ideálně. Občas se objeví následující chybová hláška. Aby nebylo zbytečně zabíráno místo,
-je cesta k adresáři *ekfslam_v1* a Python balíčkům zkrácena na ... ; dále je chybová hláška uvedena zhruba až od půlky - od posledního přepsaného modulu:
+je cesta k adresáři *ekfSLAM* a Python balíčkům zkrácena na ... ; dále je chybová hláška uvedena zhruba až od půlky - od posledního přepsaného modulu:
 
 ```console
 Traceback (most recent call last):
