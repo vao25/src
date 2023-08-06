@@ -18,6 +18,26 @@ source install/setup.bash
 ros2 run ekfSLAM ekf_sim
 ```
 
+> [!NOTE]
+I přes veškerou snahu nefunguje výsledná realizace bohužel ideálně. Občas se objeví následující chybová hláška. Aby nebylo zbytečně zabíráno místo,
+je cesta k adresáři *ekfslam_v1* a Python balíčkům zkrácena na ... ; dále je chybová hláška uvedena zhruba až od půlky - od posledního přepsaného modulu:
+
+```console
+Traceback (most recent call last):
+  ...
+  File "/.../ekfSLAM/KF_joseph_update.py", line 23, in KF_joseph_update
+    PSD_check= np.linalg.cholesky(P)
+  File "<__array_function__ internals>", line 5, in cholesky
+  File "/.../python3/dist-packages/numpy/linalg/linalg.py", line 759, in cholesky
+    r = gufunc(a, signature=signature, extobj=extobj)
+  File "/.../python3/dist-packages/numpy/linalg/linalg.py", line 100, in_raise_linalgerror_nonposdef
+    raise LinAlgError("Matrix is not positive definite")
+  numpy.linalg.LinAlgError: Matrix is not positive definite
+```
+
+Dočasným řešením je simulaci spustit znovu, protože tato chyba nenastává v každém případě.
+
+
 ### FastSLAM
 **ve workspace ros2_ws:**
 ```
