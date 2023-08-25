@@ -50,7 +50,8 @@ ros2 run fastslam fast_sim
 
 Před samotným spuštěním potřeba nainstalovat závislosti ukfslam package pomocí *rosdep* (kvůli Python knihovním modulům). Tento krok není nutné opakovat, pokud už byl jednou vykonán.
 ```
-cd ~/ros2_ws/src
+cd ~/ros2_ws
+colcon build --packages-select ukfslam
 source ~/ros2_ws/install/setup.bash
 sudo apt-get update
 rosdep install --from-paths ~/ros2_ws/src --ignore-src -r -y
