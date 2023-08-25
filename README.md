@@ -48,7 +48,7 @@ ros2 run fastslam fast_sim
 
 ### UKF-SLAM
 
-Před samotným spuštěním potřeba nainstalovat závislosti ukfslam package pomocí *rosdep* (kvůli Python knihovním modulům):
+Před samotným spuštěním potřeba nainstalovat závislosti ukfslam package pomocí *rosdep* (kvůli Python knihovním modulům). Tento krok není nutné opakovat, pokud už byl jednou vykonán.
 ```
 cd ~/ros2_ws/src
 source ~/ros2_ws/install/setup.bash
